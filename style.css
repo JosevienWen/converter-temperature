@@ -1,13 +1,28 @@
 .container-box {
-    background-color: gray;
+    background-color: black;
+    width: 500px;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+}
+.name {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.inputsuhu {
+    color: white;
+    font-size: 15px;
+    text-align: center;
 }
 
 .fa {
-    background-color: salmon;
+    background-color: lightseagreen;
+    width: auto;
 }
 .ce {
     background-color: green;
 }
 .ke {
-    background-color: cornflowerblue;
+    background-color: red;
 }

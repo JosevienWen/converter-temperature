@@ -9,12 +9,12 @@
 </head>
 <body>
     <div class="container-box">
-    <h1>Create a Temperature Converter</h1>
-    <label for="inputNumber">Fahrenhait : </label>
+    <h1 class="name">Temperature Converter From Fahrenhait To Others</h1>
+    <label for="inputNumber" class="inputsuhu">Fahrenhait : </label>
     <input type="number" name="inputNumber" placeholder="input number" oninput="temperatureConverter(this.value)">
-    <p class="fa">Fahrenhait: <span id="outputFahrenhait"></span></p>
-    <p class="ce">Celcius: <span id="outputCelcius"></span></p>
-    <p class="ke">Kelvin: <span id="outputKelvin"></span></p>
+    <p class="fa">Fahrenhait: <br><span id="outputFahrenhait"></span></p>
+    <p class="ce">Celcius: <br><span id="outputCelcius"></span></p>
+    <p class="ke">Kelvin: <br><span id="outputKelvin"></span></p>
 
     <script>
         function temperatureConverter(valueNumber){
