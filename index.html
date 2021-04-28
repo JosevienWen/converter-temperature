@@ -5,11 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container-box">
     <h1>Create a Temperature Converter</h1>
-    <label for="inputFahrenheit">Fahrenheit:</label>
-    <input type="number" name="inputFahrenhait" placeholder="input fahrenhait" oninput="temperatureConverter(this.value)">
-    <p>Celcius: <span id="outputCelcius"></span></p>
+    <label for="inputNumber">Fahrenhait : </label>
+    <input type="number" name="inputNumber" placeholder="input number" oninput="temperatureConverter(this.value)">
+    <p class="fa">Fahrenhait: <span id="outputFahrenhait"></span></p>
+    <p class="ce">Celcius: <span id="outputCelcius"></span></p>
+    <p class="ke">Kelvin: <span id="outputKelvin"></span></p>
+
+    <script>
+        function temperatureConverter(valueNumber){
+
+            valueNumber = parseFloat(valueNumber);
+            document.getElementById("outputFahrenhait").innerHTML=
+            (valueNumber+0)
+
+            valueNumber = parseFloat(valueNumber);
+            document.getElementById("outputCelcius").innerHTML=
+            (valueNumber-32)/1.8
+
+            valueNumber = parseFloat(valueNumber);
+            document.getElementById("outputKelvin").innerHTML=
+            ((valueNumber-32)/1.8)+273.15
+        }
+    </script>
+    </div>
+
 </body>
 </html>
