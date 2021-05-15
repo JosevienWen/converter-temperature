@@ -16,6 +16,18 @@
     <p class="ce">Celcius: <br><span id="outputCelcius"></span></p>
     <p class="ke">Kelvin: <br><span id="outputKelvin"></span></p>
 
+    <label for="inputNumber" class="inputsuhu">Celcius : </label>
+    <input type="number" name="inputNumber" placeholder="input number" oninput="temperatureConverter1(this.value)">
+    <p class="fa">Fahrenhait: <br><span id="outputFahrenhait1"></span></p>
+    <p class="ce">Celcius: <br><span id="outputCelcius1"></span></p>
+    <p class="ke">Kelvin: <br><span id="outputKelvin1"></span></p>
+
+    <label for="inputNumber" class="inputsuhu">Kelvin : </label>
+    <input type="number" name="inputNumber" placeholder="input number" oninput="temperatureConverter2(this.value)">
+    <p class="fa">Fahrenhait: <br><span id="outputFahrenhait2"></span></p>
+    <p class="ce">Celcius: <br><span id="outputCelcius2"></span></p>
+    <p class="ke">Kelvin: <br><span id="outputKelvin2"></span></p>
+
     <script>
         function temperatureConverter(valueNumber){
 
@@ -30,6 +42,36 @@
             valueNumber = parseFloat(valueNumber);
             document.getElementById("outputKelvin").innerHTML=
             ((valueNumber-32)/1.8)+273.15
+        }
+
+        function temperatureConverter1(valueNumber){
+
+            valueNumber = parseFloat(valueNumber);
+            document.getElementById("outputFahrenhait1").innerHTML=
+            (valueNumber*1.8)+32
+
+            valueNumber = parseFloat(valueNumber);
+            document.getElementById("outputCelcius1").innerHTML=
+            (valueNumber+0)
+
+            valueNumber = parseFloat(valueNumber);
+            document.getElementById("outputKelvin1").innerHTML=
+            (valueNumber+273.15)
+        }
+
+        function temperatureConverter2(valueNumber){
+
+            valueNumber = parseFloat(valueNumber);
+            document.getElementById("outputFahrenhait2").innerHTML=
+            ((valueNumber-273.15)*1.8)+32
+
+            valueNumber = parseFloat(valueNumber);
+            document.getElementById("outputCelcius2").innerHTML=
+            (valueNumber-273.15)
+
+            valueNumber = parseFloat(valueNumber);
+            document.getElementById("outputKelvin2").innerHTML=
+            (valueNumber+0)
         }
     </script>
     </div>
